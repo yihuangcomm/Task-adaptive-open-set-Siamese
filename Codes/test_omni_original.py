@@ -144,7 +144,7 @@ if __name__ == '__main__':
                 test_batch = checkpoint['batch']
                 print('------------finished-----------------')
             print("test_epoch:",test_batch)
-            acc, auc, soft_score[j,:], pred_label[j,:], gt = evaluation(testLoader,feature_n,i,Flags.backbone+'_omni_randomway_dropout' + str(Flags.dropout_p) +'_' +str(Flags.dropout_n) + '_test_results_1.0+hloss_'+ str(Flags.hloss_alpha)+'_'+ str(ways)+'way_'+ features +'_feature' + '_val'+'_based_'+str(Flags.val_way)+'way_single',is_hloss=Flags.is_hloss)
+            acc, auc, soft_score[j,:], pred_label[j,:], gt = evaluation(testLoader,feature_n,i,Flags.backbone+'_omni_randomway_dropout' + str(Flags.dropout_p) +'_' +str(Flags.dropout_n) + '_test_results_1.0+hloss_'+ str(Flags.hloss_alpha)+'_'+ str(ways)+'way_'+ features +'_feature' + '_val'+'_based_'+str(Flags.val_way)+'way_ensemble',is_hloss=Flags.is_hloss)
             ACC[i].append(acc)
             AUC[i].append(auc)
         acc_ensemble = (np.sum(np.sum(pred_label, axis=0)<((len(models_list)//2)+1))+0.0)/Flags.times
