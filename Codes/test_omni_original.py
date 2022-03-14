@@ -120,8 +120,7 @@ if __name__ == '__main__':
             f.write('auc_softscore:'+str(auc)+'\n')
         return acc, auc, np.asarray(soft_score,dtype=np.float32), np.asarray(pred_label,dtype=np.float32), np.asarray(gt,dtype=np.float32)
 
-
-    models_list = [int(Flags.checkbreakpoint)]*5
+    models_list = list(np.array([-400,-300,-200,-100,0]) + int(Flags.checkbreakpoint))
     ACC = {}
     AUC = {}
     for n in range(len(way_list)):
