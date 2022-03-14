@@ -138,7 +138,7 @@ if __name__ == '__main__':
         #loading checkpoint
             if Flags.resume:
                 print('-----------check point loading------------------')
-                path_checkpoint = Flags.model_path + '/model-'+ Flags.backbone +'-dropout'str(Flags.dropout_p) +'_' +str(Flags.dropout_n)+'-distortion-new-1.0+hloss_'  + str(Flags.hloss_alpha) +'-' + str(model_id) + ".pt"
+                path_checkpoint = Flags.model_path + '/model-'+ Flags.backbone +'-dropout'+ str(Flags.dropout_p) +'_' +str(Flags.dropout_n)+'-distortion-new-1.0+hloss_'  + str(Flags.hloss_alpha) +'-' + str(model_id) + ".pt"
                 checkpoint = torch.load(path_checkpoint)         
                 net.load_state_dict(checkpoint['model_state_dict']) 
                 acc_best_single = checkpoint['acc_best_single']
