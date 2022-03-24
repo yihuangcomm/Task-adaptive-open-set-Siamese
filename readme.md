@@ -1,4 +1,4 @@
-## Probability based Task Adaptive Siamese Open-set Recognition for Encrypted Network Traffic With Bidirectional Dropout Data Augmentation
+## Task Adaptive Siamese Neural Networks for Open-Set Recognition of Encrypted Network Traffic With Bidirectional Dropout
 
 An implementation of this paper in pytorch on the encrypted network trafffic dataset and the Omniglot dataset.
 
